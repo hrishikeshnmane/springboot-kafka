@@ -10,7 +10,14 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic topic(){
-        return TopicBuilder.name("topic1")
+        return TopicBuilder.name("topicString")
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic topicJson(){
+        return TopicBuilder.name("topicJson")
                 .replicas(1)
                 .build();
     }
